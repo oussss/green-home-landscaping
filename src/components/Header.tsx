@@ -51,33 +51,50 @@ const Header: React.FC = () => {
     { href: '#contact', label: 'Contact' },
   ];
 
-  const scrollToSection = (href: string) => {
+  const scrollToSection = (href: string, event?: React.MouseEvent<HTMLButtonElement>) => {
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
       setIsMobileMenuOpen(false);
+      
+      // Remove focus from the button after clicking
+      if (event) {
+        (event.target as HTMLButtonElement).blur();
+      }
     }
   };
 
-  const scrollToTop = () => {
+  const scrollToTop = (event?: React.MouseEvent<HTMLButtonElement>) => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
     setIsMobileMenuOpen(false);
+    
+    // Remove focus from the button after clicking
+    if (event) {
+      (event.target as HTMLButtonElement).blur();
+    }
   };
 
-  const handleGetQuote = () => {
+  const handleGetQuote = (event?: React.MouseEvent<HTMLButtonElement>) => {
     const element = document.querySelector('#contact');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
       setIsMobileMenuOpen(false);
+      
+      // Remove focus from the button after clicking
+      if (event) {
+        (event.target as HTMLButtonElement).blur();
+      }
     }
   };
 
   const toggleMobileMenu = (e: React.MouseEvent) => {
     e.stopPropagation();
     setIsMobileMenuOpen(!isMobileMenuOpen);
+    // Remove focus from the burger menu button
+    (e.target as HTMLButtonElement).blur();
   };
 
   return (
@@ -93,8 +110,8 @@ const Header: React.FC = () => {
           <div className="flex items-center justify-between h-full">
             {/* Logo - Now Clickable */}
             <button
-              onClick={scrollToTop}
-              className="flex items-center space-x-2 animate-slide-in-left transition-all duration-300 hover:scale-105 focus:outline-none rounded-lg p-2 -m-2"
+              onClick={(e) => scrollToTop(e)}
+              className="flex items-center space-x-2 animate-slide-in-left transition-all duration-300 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded-lg p-2 -m-2"
               aria-label="Go to home page"
             >
               <Leaf className={`h-8 w-8 transition-colors duration-500 animate-pulse-slow ${
@@ -113,8 +130,8 @@ const Header: React.FC = () => {
                 {navLinks.map((link, index) => (
                   <button
                     key={link.href}
-                    onClick={() => scrollToSection(link.href)}
-                    className={`font-nav transition-all duration-300 relative group tracking-wide ${
+                    onClick={(e) => scrollToSection(link.href, e)}
+                    className={`font-nav transition-all duration-300 relative group tracking-wide focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded px-2 py-1 ${
                       isScrolled 
                         ? 'text-secondary hover:text-primary' 
                         : 'text-white/90 hover:text-white'
@@ -131,8 +148,8 @@ const Header: React.FC = () => {
 
               {/* Get a Quote Button */}
               <button
-                onClick={handleGetQuote}
-                className="bg-accent text-white px-6 py-2.5 font-nav font-medium tracking-wide transition-all duration-500 hover:bg-accent/90 hover:scale-105 hover:shadow-lg animate-slide-in-right relative overflow-hidden group"
+                onClick={(e) => handleGetQuote(e)}
+                className="bg-accent text-white px-6 py-2.5 font-nav font-medium tracking-wide transition-all duration-500 hover:bg-accent/90 hover:scale-105 hover:shadow-lg animate-slide-in-right relative overflow-hidden group rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
                 style={{ animationDelay: '400ms' }}
               >
                 <span className="relative z-10">Get a Quote</span>
@@ -143,7 +160,7 @@ const Header: React.FC = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMobileMenu}
-              className={`md:hidden p-3 transition-all duration-300 animate-slide-in-right z-50 relative ${
+              className={`md:hidden p-3 transition-all duration-300 animate-slide-in-right z-50 relative rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 ${
                 isScrolled 
                   ? 'text-secondary hover:text-primary' 
                   : 'text-white/90 hover:text-white'
@@ -177,8 +194,8 @@ const Header: React.FC = () => {
         {/* Mobile Menu Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-100">
           <button
-            onClick={scrollToTop}
-            className="flex items-center space-x-2 transition-all duration-300 hover:scale-105 focus:outline-none rounded-lg p-1 -m-1"
+            onClick={(e) => scrollToTop(e)}
+            className="flex items-center space-x-2 transition-all duration-300 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded-lg p-1 -m-1"
             aria-label="Go to home page"
           >
             <Leaf className="h-6 w-6 text-accent" />
@@ -188,7 +205,7 @@ const Header: React.FC = () => {
           </button>
           <button
             onClick={() => setIsMobileMenuOpen(false)}
-            className="p-2 text-secondary hover:text-primary transition-colors duration-300"
+            className="p-2 text-secondary hover:text-primary transition-colors duration-300 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
             aria-label="Close menu"
           >
             <X className="h-5 w-5" />
@@ -200,8 +217,8 @@ const Header: React.FC = () => {
           {navLinks.map((link, index) => (
             <button
               key={link.href}
-              onClick={() => scrollToSection(link.href)}
-              className={`text-left font-nav text-lg text-secondary hover:text-primary transition-all duration-300 py-2 tracking-wide transform border-b border-gray-100 last:border-b-0 ${
+              onClick={(e) => scrollToSection(link.href, e)}
+              className={`text-left font-nav text-lg text-secondary hover:text-primary transition-all duration-300 py-2 tracking-wide transform border-b border-gray-100 last:border-b-0 rounded px-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 ${
                 isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'
               }`}
               style={{ 
@@ -214,8 +231,8 @@ const Header: React.FC = () => {
           
           {/* Mobile Get a Quote Button */}
           <button
-            onClick={handleGetQuote}
-            className={`w-full bg-accent text-white py-4 px-6 font-nav font-medium tracking-wide transition-all duration-500 hover:bg-accent/90 relative overflow-hidden group mt-6 rounded-lg transform ${
+            onClick={(e) => handleGetQuote(e)}
+            className={`w-full bg-accent text-white py-4 px-6 font-nav font-medium tracking-wide transition-all duration-500 hover:bg-accent/90 relative overflow-hidden group mt-6 rounded-lg transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 ${
               isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'
             }`}
             style={{ 
