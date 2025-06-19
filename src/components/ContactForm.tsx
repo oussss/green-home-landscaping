@@ -139,7 +139,7 @@ const ContactForm: React.FC = () => {
           }`}>
             <h3 className="text-2xl font-heading font-semibold text-primary mb-8">Get In Touch</h3>
             
-            <div className="space-y-6 mb-8">
+            <div className="space-y-6">
               {[
                 { icon: Phone, title: 'Phone', content: '+971 4 GARDEN-1', delay: '200ms' },
                 { icon: Mail, title: 'Email', content: 'hello@greenhomelandscaping.ae', delay: '300ms' },
@@ -162,18 +162,6 @@ const ContactForm: React.FC = () => {
                   </div>
                 </div>
               ))}
-            </div>
-
-            {/* Map Placeholder */}
-            <div className={`aspect-video bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`} style={{ transitionDelay: '600ms' }}>
-              <img
-                src="https://images.pexels.com/photos/1488515/pexels-photo-1488515.jpeg?_gl=1*aay95p*_ga*MTQ0NDg1OTc3MS4xNzUwMzU1NjMz*_ga_8JE65Q40S6*czE3NTAzNjA0NjMkbzIkZzEkdDE3NTAzNjMzNzYkajU5JGwwJGgw"
-                alt="Dubai location map"
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-                loading="lazy"
-              />
             </div>
           </div>
 
