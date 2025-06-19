@@ -94,7 +94,7 @@ const Header: React.FC = () => {
             {/* Logo - Now Clickable */}
             <button
               onClick={scrollToTop}
-              className="flex items-center space-x-2 animate-slide-in-left transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50 rounded-lg p-2 -m-2"
+              className="flex items-center space-x-2 animate-slide-in-left transition-all duration-300 hover:scale-105 focus:outline-none rounded-lg p-2 -m-2"
               aria-label="Go to home page"
             >
               <Leaf className={`h-8 w-8 transition-colors duration-500 animate-pulse-slow ${
@@ -178,7 +178,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between p-6 border-b border-gray-100">
           <button
             onClick={scrollToTop}
-            className="flex items-center space-x-2 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50 rounded-lg p-1 -m-1"
+            className="flex items-center space-x-2 transition-all duration-300 hover:scale-105 focus:outline-none rounded-lg p-1 -m-1"
             aria-label="Go to home page"
           >
             <Leaf className="h-6 w-6 text-accent" />
