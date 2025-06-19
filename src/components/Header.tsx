@@ -59,6 +59,14 @@ const Header: React.FC = () => {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+    setIsMobileMenuOpen(false);
+  };
+
   const handleGetQuote = () => {
     const element = document.querySelector('#contact');
     if (element) {
@@ -83,8 +91,12 @@ const Header: React.FC = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
           <div className="flex items-center justify-between h-full">
-            {/* Logo */}
-            <div className="flex items-center space-x-2 animate-slide-in-left">
+            {/* Logo - Now Clickable */}
+            <button
+              onClick={scrollToTop}
+              className="flex items-center space-x-2 animate-slide-in-left transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50 rounded-lg p-2 -m-2"
+              aria-label="Go to home page"
+            >
               <Leaf className={`h-8 w-8 transition-colors duration-500 animate-pulse-slow ${
                 isScrolled ? 'text-accent' : 'text-white'
               }`} />
@@ -93,7 +105,7 @@ const Header: React.FC = () => {
               }`}>
                 Green Home Landscaping
               </span>
-            </div>
+            </button>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
@@ -164,12 +176,16 @@ const Header: React.FC = () => {
       >
         {/* Mobile Menu Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-100">
-          <div className="flex items-center space-x-2">
+          <button
+            onClick={scrollToTop}
+            className="flex items-center space-x-2 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50 rounded-lg p-1 -m-1"
+            aria-label="Go to home page"
+          >
             <Leaf className="h-6 w-6 text-accent" />
             <span className="font-display font-medium text-primary text-lg">
               Green Home
             </span>
-          </div>
+          </button>
           <button
             onClick={() => setIsMobileMenuOpen(false)}
             className="p-2 text-secondary hover:text-primary transition-colors duration-300"
