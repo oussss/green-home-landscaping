@@ -169,7 +169,7 @@ const ContactForm: React.FC = () => {
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`} style={{ transitionDelay: '600ms' }}>
               <img
-                src="https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop"
+                src="https://images.pexels.com/photos/1488515/pexels-photo-1488515.jpeg?_gl=1*aay95p*_ga*MTQ0NDg1OTc3MS4xNzUwMzU1NjMz*_ga_8JE65Q40S6*czE3NTAzNjA0NjMkbzIkZzEkdDE3NTAzNjMzNzYkajU5JGwwJGgw"
                 alt="Dubai location map"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
                 loading="lazy"
