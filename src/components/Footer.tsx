@@ -1,5 +1,5 @@
 import React from 'react';
-import { Camera, Instagram, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { Instagram, Facebook, Twitter, Linkedin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -55,13 +55,15 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+            {/* Brand */}
             <div className="lg:col-span-2 animate-slide-in-up">
-              <div className="flex items-center space-x-2 mb-6">
-                <Camera className="h-8 w-8 text-accent animate-pulse-slow" />
-                <span className="text-xl font-semibold">Shots Studio</span>
+              <div className="mb-6">
+                <span className="text-2xl text-white" style={{ fontFamily: "'Gugi', sans-serif" }}>
+                  Shots Studio
+                </span>
               </div>
               <p className="text-white/80 mb-6 max-w-md leading-relaxed">
-                Dubai’s premium product photography studio. We help brands create visuals 
+                Dubai’s premium product photography studio. We help brands create visuals
                 that sell, engage, and tell a story worth remembering.
               </p>
               <div className="flex space-x-4">
@@ -79,6 +81,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
 
+            {/* Services */}
             <div className="animate-slide-in-up" style={{ animationDelay: '200ms' }}>
               <h4 className="font-semibold mb-4">Services</h4>
               <ul className="space-y-2">
@@ -92,6 +95,7 @@ const Footer: React.FC = () => {
               </ul>
             </div>
 
+            {/* Company */}
             <div className="animate-slide-in-up" style={{ animationDelay: '400ms' }}>
               <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-2">
@@ -105,6 +109,7 @@ const Footer: React.FC = () => {
               </ul>
             </div>
 
+            {/* Resources */}
             <div className="animate-slide-in-up" style={{ animationDelay: '600ms' }}>
               <h4 className="font-semibold mb-4">Resources</h4>
               <ul className="space-y-2">
@@ -120,10 +125,11 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
+        {/* Bottom Bar */}
         <div className="border-t border-white/10 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 animate-slide-in-up" style={{ animationDelay: '800ms' }}>
             <div className="text-white/70 text-sm">
-              © {currentYear} Shots Studio. All rights reserved.
+              &copy; {currentYear} Shots Studio. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
               {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map((link, index) => (
