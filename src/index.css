@@ -52,7 +52,7 @@
   }
   
   .text-accent {
-    color: #2E5E3E;
+    color: #ffb3ba;
   }
   
   .bg-primary {
@@ -64,7 +64,7 @@
   }
   
   .bg-accent {
-    background-color: #2E5E3E;
+    background-color: #ffb3ba;
   }
   
   .bg-light {
@@ -72,7 +72,7 @@
   }
   
   .border-accent {
-    border-color: #2E5E3E;
+    border-color: #ffb3ba;
   }
   
   .hover\:scale-103:hover {
@@ -404,17 +404,17 @@ html {
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #2E5E3E;
+    background: #ffb3ba;
     border-radius: 3px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #1e3d26;
+    background: #ff8fa3;
   }
   
   html {
     scrollbar-width: thin;
-    scrollbar-color: #2E5E3E #f1f5f9;
+    scrollbar-color: #ffb3ba #f1f5f9;
   }
 }
 
@@ -423,13 +423,13 @@ button:focus,
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 2px solid #2E5E3E;
+  outline: 2px solid #ffb3ba;
   outline-offset: 2px;
 }
 
 /* Navigation active state */
 nav a.active {
-  color: #2E5E3E;
+  color: #ffb3ba;
 }
 
 nav a.active::after {
@@ -439,7 +439,7 @@ nav a.active::after {
   left: 0;
   right: 0;
   height: 2px;
-  background-color: #2E5E3E;
+  background-color: #ffb3ba;
 }
 
 /* Loading states */
