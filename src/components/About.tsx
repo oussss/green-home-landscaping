@@ -49,13 +49,15 @@ const About: React.FC = () => {
           }`}>
             <h2 className="text-4xl lg:text-5xl font-display font-medium text-primary mb-6 tracking-tighter">
               Obsessed With <span className="font-semibold">The Shot</span>
-              <br />Since 2017
+              <br />Since 2021
             </h2>
 
             <p className="text-xl font-body text-secondary mb-8 leading-relaxed">
-              Shots Studio is a Dubai-based product photography studio built for brands that take 
-              their visuals seriously. We combine technical mastery with creative storytelling to 
-              produce images that sell, engage, and elevate your brand.
+              I began my photography journey in 2021, driven by a passion for highlighting details and
+creating visuals that reflect the true value of each product. 
+              I specialize in product, service, and commercial photography. I have collaborated with several
+local brands across the country, helping them build a strong visual presence that enhances
+customer trust and elevates their brand positioning
             </p>
 
             <div className="space-y-4 mb-8">
@@ -111,10 +113,10 @@ const About: React.FC = () => {
             <div className={`absolute -bottom-6 -left-6 bg-white p-6 shadow-2xl max-w-xs rounded-lg border-l-4 border-accent transition-all duration-1000 hover:scale-105 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`} style={{ transitionDelay: '800ms' }}>
-              <h4 className="font-heading font-semibold text-primary mb-2">Layla Khalid</h4>
+              <h4 className="font-heading font-semibold text-primary mb-2">Omar Suleiman</h4>
               <p className="text-sm font-body text-secondary mb-2">Founder & Creative Director</p>
               <p className="text-xs font-body text-secondary italic">
-                "Every product has a story. Our job is to make sure the world sees it."
+                "I believe that photography is not merely a captured image, but an effective marketing tool that creates real impact."
               </p>
             </div>
 
