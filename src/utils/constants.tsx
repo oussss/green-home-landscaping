@@ -6,7 +6,7 @@ export const projectsData = [
     title: 'Luxury Skincare Line',
     description: 'Full product shoot for a premium skincare brand — hero shots, flat lays, and lifestyle imagery',
     category: 'beauty',
-    image: 'https://images.pexels.com/photos/3762875/pexels-photo-3762875.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+    image: 'https://alumniuaeuac-my.sharepoint.com/personal/201850109_uaeu_ac_ae/_layouts/15/onedrive.aspx?viewid=0d4625df%2Ddf8f%2D4bdc%2Da28b%2D93149d764cd7&id=%2Fpersonal%2F201850109%5Fuaeu%5Fac%5Fae%2FDocuments%2FWebsite%20Material%2FFlowers%2D2%2F29%2DIMG%5F0929%2Ejpg&parent=%2Fpersonal%2F201850109%5Fuaeu%5Fac%5Fae%2FDocuments%2FWebsite%20Material%2FFlowers%2D2',
   },
   {
     id: 2,
