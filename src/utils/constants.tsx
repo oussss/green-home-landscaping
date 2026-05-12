@@ -3,8 +3,8 @@ import { Camera, Image, Package, Star, Video } from 'lucide-react';
 export const projectsData = [
   {
     id: 1,
-    title: 'Luxury Skincare Line',
-    description: 'Full product shoot for a premium skincare brand — hero shots, flat lays, and lifestyle imagery',
+    title: 'Bouquet Red Roses',
+    description: 'Full product shoot for a premium florist — hero shots, flat lays, and lifestyle imagery',
     category: 'beauty',
     image: 'https://images.pexels.com/photos/36059570/pexels-photo-36059570.jpeg?_gl=1*oia06p*_ga*MzUzMDExOTAzLjE3Nzg2MDkxODY.*_ga_8JE65Q40S6*czE3Nzg2MDkxODUkbzEkZzEkdDE3Nzg2MTAwMTQkajQ0JGwwJGgw',
   },
