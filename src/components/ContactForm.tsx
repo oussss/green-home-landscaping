@@ -292,7 +292,7 @@ const ContactForm: React.FC = () => {
 
               {/* Status Messages */}
               {submitStatus === 'success' && (
-                <div className="flex items-center space-x-2 text-green-600 bg-green-50 p-4 rounded-lg animate-slide-in-up">
+                <div className="flex items-center space-x-2 text-accent bg-accent/10 p-4 rounded-lg animate-slide-in-up">
                   <CheckCircle className="w-5 h-5" />
                   <span className="font-body">Thank you! We'll get back to you within 24 hours.</span>
                 </div>
