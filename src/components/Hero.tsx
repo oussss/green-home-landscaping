@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 transform scale-110 transition-transform duration-1000 ease-out">
         <img
-          src="https://lh3.googleusercontent.com/u/0/d/10h6Rp9pDacwNXBqE-k9ZOLP0wmOoqV2_"
+          src="https://lh3.googleusercontent.com/u/0/d/1EvzmDmOaet0FPQCKfh6oV9UjBcemwZ8p"
           alt="Professional product photography studio"
           className="w-full h-full object-cover animate-ken-burns"
         />
