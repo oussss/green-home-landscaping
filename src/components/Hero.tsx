@@ -45,10 +45,10 @@ const Hero: React.FC = () => {
       }`}>
         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-medium text-white mb-6 leading-none tracking-tighter animate-slide-in-up">
           <span className="block animate-slide-in-up" style={{ animationDelay: '200ms' }}>
-            Where Products
+            Photography is an effective marketing tool that creates real impact
           </span>
           <span className="block font-semibold animate-slide-in-up -mt-1 lg:-mt-2" style={{ animationDelay: '400ms' }}>
-            Become Icons
+            
           </span>
         </h1>
 
